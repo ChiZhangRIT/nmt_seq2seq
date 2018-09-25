@@ -1,2 +1,3 @@
 nmt/nmt_data/
 nmt/nmt_model/
+*.pyc
