@@ -2,21 +2,22 @@ import os
 
 # more training on caption dataset, to get the best model.
 command = 'python -m nmt.nmt \
-		--src=enc --tgt=dec \
-		--vocab_prefix=nmt/nmt_data/_vocab50000  \
-		--train_prefix=nmt/nmt_data/_train_captions \
-		--dev_prefix=nmt/nmt_data/_train_captions_1000  \
-		--out_dir=nmt/nmt_model/caption_moreTrain \
-		--num_train_steps=1000000 \
-		--steps_per_stats=20000 \
-		--num_layers=3 \
-		--num_units=300 \
-		--dropout=0.2 \
-		--metrics=bleu \
-		--batch_size=256 \
-		--learning_rate=0.001 \
-		--optimizer=adam \
-		--decay_scheme=luong234 '
+--src=enc
+--tgt=dec \
+--vocab_prefix=nmt/nmt_data/_vocab50000  \
+--train_prefix=nmt/nmt_data/_train_captions \
+--dev_prefix=nmt/nmt_data/_train_captions_1000  \
+--out_dir=nmt/nmt_model/caption_moreTrain \
+--num_train_steps=1000000 \
+--steps_per_stats=20000 \
+--num_layers=3 \
+--num_units=300 \
+--dropout=0.2 \
+--metrics=bleu \
+--batch_size=256 \
+--learning_rate=0.001 \
+--optimizer=adam \
+--decay_scheme=luong234 '
 		
 # # Experiment with full caption dataset.
 # command = 'python -m nmt.nmt \
